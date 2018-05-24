@@ -15,7 +15,7 @@ def redrawAll():
         item.destroy()
     for r in range(0,5):
         for c in range(0,5):
-            boardgraphics = RectangleAsset(30,30,LineStyle(1,black),white)
+            boardgraphics = RectangleAsset(30 *c,30*r,LineStyle(1,black),white)
             Sprite(boardgraphics)
 
 if __name__ == '__main__': 
