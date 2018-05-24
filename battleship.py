@@ -13,14 +13,14 @@ def buildBoard():
 def redrawAll():
     for item in App().spritelist[:]:
         item.destroy()
-        boardgraphics = RectangleAsset(30,30,LineStyle(1,black),white)
+    for r in range(5):
+        for c in range(5):
+            boardgraphics = RectangleAsset(30,30,LineStyle(1,black),white)
+            Sprite(boardgraphics)
 
 if __name__ == '__main__': 
     
     redrawAll()
-    for r in range(5):
-        for c in range(5):
-            Sprite(RectangleAsset(30,30,LineStyle(1,black),white))
     
     App().run()
     
