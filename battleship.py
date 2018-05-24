@@ -12,8 +12,11 @@ def redrawAll():
         item.destroy()
     for r in range(0,5):
         for c in range(0,5):
+            Sprite
 
 if __name__ == '__main__': 
+    
+    redrawAll()
     
     App().run()
     
