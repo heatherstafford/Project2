@@ -5,14 +5,15 @@
 from ggame import *
 
 def buildBoard():
-    board = [['','',''],['','',''],['','','']]
+    board = [['','',''],['','',''],['','',''],['','',''],['','','']]
 
 def redrawAll():
     for item in App().spritelist[:]:
         item.destroy()
     for r in range(0,5):
         for c in range(0,5):
-            Sprite(RectangleAsset(10,10,LineStyle(1,0x000000),0xFFFFFF)
+            boardgraphics = RectangleAsset(10,10,LineStyle(1,0x000000),0xFFFFFF)
+            Sprite(boardgraphics)
 
 if __name__ == '__main__': 
     
