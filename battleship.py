@@ -12,7 +12,7 @@ def redrawAll():
         item.destroy()
     for r in range(0,5):
         for c in range(0,5):
-            Sprite
+            Sprite(RectangleAsset(10 ,10,LineStyle(1,0xFFFFFF),0x000000)
 
 if __name__ == '__main__': 
     
