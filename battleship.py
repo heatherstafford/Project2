@@ -8,7 +8,6 @@ RADIUS = 30
 
 white = Color(0xFFFFFF,1)
 black = Color(0x000000,1)
-boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
 
 def buildBoard():
     board = [['','',''],['','',''],['','',''],['','',''],['','','']]
@@ -22,6 +21,7 @@ def redrawAll():
 
 if __name__ == '__main__': 
     
+    boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
 
     redrawAll()
     
