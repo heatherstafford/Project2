@@ -15,8 +15,8 @@ def buildBoard():
 def redrawAll():
     for item in App().spritelist[:]:
         item.destroy()
-    for r in range(25):
-        for c in range(25):
+    for r in range(5):
+        for c in range(5):
             Sprite(boardgraphics(10 + (2*RADIUS+10)*r,10 + (2*RADIUS+10)*c))
 
 if __name__ == '__main__': 
