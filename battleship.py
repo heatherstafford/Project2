@@ -4,8 +4,8 @@
 
 from ggame import *
 
-white = Color(0xFFFFFF)
-black = Color(0x000000)
+white = Color(0xFFFFFF,1)
+black = Color(0x000000,1)
 
 def buildBoard():
     board = [['','',''],['','',''],['','',''],['','',''],['','','']]
