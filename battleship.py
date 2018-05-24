@@ -16,7 +16,7 @@ def redrawAll():
     for r in range(5):
         for c in range(5):
             boardgraphics = RectangleAsset(30,30,LineStyle(1,black),white)
-            Sprite(boardgraphics)
+            Sprite(boardgraphics(10 + (10)*i,10 + (10)*j))
 
 if __name__ == '__main__': 
     
