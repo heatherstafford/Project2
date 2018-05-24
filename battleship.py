@@ -17,10 +17,11 @@ def redrawAll():
         item.destroy()
     for r in range(5):
         for c in range(5):
-            boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
-            Sprite(boardgraphics(2*RADIUS+10)*r,(2*RADIUS+10)*c)))
+            Sprite(boardgraphics(2*RADIUS+10)*r,(2*RADIUS+10)*c))
 
 if __name__ == '__main__': 
+    
+    boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
     
     redrawAll()
     
