@@ -17,7 +17,7 @@ def redrawAll():
         item.destroy()
     for r in range(5):
         for c in range(5):
-            Sprite(boardgraphics(10 + (2*RADIUS+10)*r,10 + (2*RADIUS+10)*c))
+            Sprite(boardgraphics,((2*RADIUS+10)*r,(2*RADIUS+10)*c))
 
 if __name__ == '__main__': 
     
