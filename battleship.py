@@ -29,7 +29,7 @@ def pickComputerShips():
     ship3 = randint(0,5)
     if ship3 == ship1 or ship3 == ship2:
         ship3 = randint(0,5)
-    print(ship1, ship2, ship3, ship4)
+    print(ship1, ship2, ship3)
     
 if __name__ == '__main__': 
     
