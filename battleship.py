@@ -24,9 +24,13 @@ def redrawAll():
 def pickComputerShips():
     ship1 = randint(0,5)
     ship2 = randint(0,5)
+    if ship2 == ship1:
+        ship2 = randint(0,5)
     ship3 = randint(0,5)
+    if ship3 == ship1 or ship3 == shi2:
+        ship3 = randint(0,5)
+    print(ship1, ship2, ship3, ship4)
     
-
 if __name__ == '__main__': 
     
     boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
