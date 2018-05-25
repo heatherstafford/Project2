@@ -3,6 +3,7 @@
 #battleship.py - project2
 
 from ggame import *
+from random import randint
 
 RADIUS = 50
 
@@ -19,6 +20,12 @@ def redrawAll():
         for c in range(5):
             Sprite(boardgraphics,((RADIUS)*r,(RADIUS)*c))
             Sprite(boardgraphics,(((RADIUS)*r) + 400,(RADIUS)*c))
+
+def pickComputerShips():
+    ship1 = randint(0,5)
+    ship2 = randint(0,5)
+    ship3 = randint(0,5)
+    
 
 if __name__ == '__main__': 
     
