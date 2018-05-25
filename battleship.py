@@ -4,7 +4,7 @@
 
 from ggame import *
 
-RADIUS = 30
+RADIUS = 50
 
 white = Color(0xFFFFFF,1)
 black = Color(0x000000,1)
@@ -17,7 +17,8 @@ def redrawAll():
         item.destroy()
     for r in range(5):
         for c in range(5):
-            Sprite(boardgraphics,((2*RADIUS+10)*r,(2*RADIUS+10)*c))
+            Sprite(boardgraphics,((RADIUS)*r,(RADIUS)*c)
+            Sprite(boardgraphics,((RADIUS)*r,(RADIUS)*c)
 
 if __name__ == '__main__': 
     
