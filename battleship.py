@@ -22,14 +22,14 @@ def redrawAll():
             Sprite(boardgraphics,(((RADIUS)*r) + 400,(RADIUS)*c))
 
 def pickComputerShips():
-    ship1 = randint(0,5)
-    ship2 = randint(0,5)
-    while ship2 == ship1:
-        ship2 = randint(0,5)
-    ship3 = randint(0,5)
-    while ship3 == ship1 or ship3 == ship2:
-        ship3 = randint(0,5)
-    print(ship1, ship2, ship3)
+    ship1row = randint(0,5)
+    ship2row = randint(0,5)
+    while ship2row == ship1row:
+        ship2row = randint(0,5)
+    ship3row = randint(0,5)
+    while ship3row == ship1row or ship3row == ship2row:
+        ship3row = randint(0,5)
+    print(ship1row, ship2row, ship3row)
     
 if __name__ == '__main__': 
     
