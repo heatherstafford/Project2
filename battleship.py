@@ -33,11 +33,15 @@ def pickComputerShips():
     
     ship1col = randint(0,5)
     ship2col = randint(0,5)
+    ship3col = randint(0,5)
+    
+    """
     while ship2col == ship1row:
         ship2col = randint(0,5)
     ship3col = randint(0,5)
     while ship3col == ship1col or ship3col == ship2col:
         ship3col = randint(0,5)
+    """
     print(ship1col, ship2col, ship3col)
     
 if __name__ == '__main__': 
