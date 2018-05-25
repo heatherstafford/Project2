@@ -24,10 +24,10 @@ def redrawAll():
 def pickComputerShips():
     ship1 = randint(0,5)
     ship2 = randint(0,5)
-    if ship2 == ship1:
+    while ship2 == ship1:
         ship2 = randint(0,5)
     ship3 = randint(0,5)
-    if ship3 == ship1 or ship3 == ship2:
+    while ship3 == ship1 or ship3 == ship2:
         ship3 = randint(0,5)
     print(ship1, ship2, ship3)
     
