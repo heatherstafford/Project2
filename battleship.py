@@ -56,6 +56,24 @@ def mouseClick(event):
         print(col)
     else:
         print('Invalid Number')
+        
+    if event.y <= 50:
+        row = 1
+        print(row)
+    elif event.y <= 100:
+        row = 2
+        print(row)
+    elif event.y <= 150:
+        row = 3
+        print(row)
+    elif event.y <= 200:
+        row = 4
+        print(row)
+    elif event.y <= 250:
+        row = 5
+        print(row)
+    else:
+        print('Invalid Number')
     
 if __name__ == '__main__': 
     
