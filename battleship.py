@@ -55,7 +55,6 @@ def mouseClick(event):
         
     if event.y <= 50:
         row = 1
-        Sprite(ships,(0,0)
     elif event.y <= 100:
         row = 2
     elif event.y <= 150:
@@ -66,6 +65,9 @@ def mouseClick(event):
         row = 5
     else:
         print('Invalid Space')
+    
+    if row = 1 and col = 1:
+        Sprite(ships,(0,0)
     
 if __name__ == '__main__': 
     
