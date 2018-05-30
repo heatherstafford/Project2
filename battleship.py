@@ -37,9 +37,21 @@ def pickComputerShips():
     print(ship1col, ship2col, ship3col)
     
 def computerTurn(): 
-    
+    return
 def mouseClick(event):
-    
+    if event.x <= 40:
+        col = 1
+    elif event.x <= 80:
+        col = 2
+    elif event.x <= 120:
+        col = 3
+    elif event.x <= 160:
+        col = 4
+    elif event.x <= 200:
+        col = 5
+    else:
+        print('Invalid Number')
+print(col)
     
 if __name__ == '__main__': 
     
@@ -48,5 +60,6 @@ if __name__ == '__main__':
     redrawAll()
     pickComputerShips()
     
+    App().listenMouseEvent('click', mouseClick)
     App().run()
     
