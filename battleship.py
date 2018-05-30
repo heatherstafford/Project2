@@ -49,9 +49,9 @@ def mouseClick(event):
         col = 4
     elif event.x <= 200:
         col = 5
-    else:
+    elif event.x > 200:
         print('Invalid Number')
-print(col)
+    print(col)
     
 if __name__ == '__main__': 
     
