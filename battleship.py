@@ -39,17 +39,17 @@ def pickComputerShips():
 def computerTurn(): 
     return
 def mouseClick(event):
-    if event.x <= 40:
+    if event.x <= 50:
         col = 1
-    elif event.x <= 80:
+    elif event.x <= 100:
         col = 2
-    elif event.x <= 120:
+    elif event.x <= 150:
         col = 3
-    elif event.x <= 160:
-        col = 4
     elif event.x <= 200:
+        col = 4
+    elif event.x <= 250:
         col = 5
-    elif event.x > 200:
+    else:
         print('Invalid Number')
     print(col)
     
