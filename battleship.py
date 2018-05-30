@@ -41,17 +41,21 @@ def computerTurn():
 def mouseClick(event):
     if event.x <= 50:
         col = 1
+        print(col)
     elif event.x <= 100:
         col = 2
+        print(col)
     elif event.x <= 150:
         col = 3
+        print(col)
     elif event.x <= 200:
         col = 4
+        print(col)
     elif event.x <= 250:
         col = 5
+        print(col)
     else:
         print('Invalid Number')
-    print(col)
     
 if __name__ == '__main__': 
     
