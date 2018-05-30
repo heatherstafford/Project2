@@ -65,10 +65,20 @@ def mouseClick(event):
         row = 5
     else:
         print('Invalid Space')
-    
-    for row in range(0,5):
-        while col == 1:
-            
+        
+    for row in range(0,6):
+        if col == 1:
+            Sprite(ships,(0,0))
+        elif col == 2:
+            Sprite(ships,(50,0))
+        elif col == 2:
+            Sprite(ships,(100,0))
+        elif col == 3:
+            Sprite(ships,(50,0))
+        elif col == 4:
+            Sprite(ships,(100,0))
+        elif col == 5:
+            Sprite(ships,(100,0))
     
 if __name__ == '__main__': 
     
