@@ -55,7 +55,7 @@ def mouseClick(event):
         col = 5
         print(col)
     else:
-        print('Invalid Number')
+        print('Invalid Space')
         
     if event.y <= 50:
         row = 1
@@ -73,7 +73,7 @@ def mouseClick(event):
         row = 5
         print(row)
     else:
-        print('Invalid Number')
+        print('Invalid Space')
     
 if __name__ == '__main__': 
     
