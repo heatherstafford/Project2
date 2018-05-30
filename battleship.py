@@ -41,41 +41,33 @@ def computerTurn():
 def mouseClick(event):
     if event.x <= 50:
         col = 1
-        print(col)
     elif event.x <= 100:
         col = 2
-        print(col)
     elif event.x <= 150:
         col = 3
-        print(col)
     elif event.x <= 200:
         col = 4
-        print(col)
     elif event.x <= 250:
         col = 5
-        print(col)
     else:
         print('Invalid Space')
         
     if event.y <= 50:
         row = 1
-        print(row)
     elif event.y <= 100:
         row = 2
-        print(row)
     elif event.y <= 150:
         row = 3
-        print(row)
     elif event.y <= 200:
         row = 4
-        print(row)
     elif event.y <= 250:
         row = 5
-        print(row)
     else:
         print('Invalid Space')
     
 if __name__ == '__main__': 
+    
+    data = {}
     
     boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
 
