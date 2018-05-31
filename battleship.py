@@ -40,33 +40,10 @@ def pickComputerShips():
 def computerTurn(): 
     return
 def mouseClick(event):
-    if event.x <= 50:
-        col = 1
-    elif event.x <= 100:
-        col = 2
-    elif event.x <= 150:
-        col = 3
-    elif event.x <= 200:
-        col = 4
-    elif event.x <= 250:
-        col = 5
-    else:
-        print('Invalid Space')
+    row = event.y // 50
+    col = event.x // 50
         
-    if event.y <= 50:
-        row = 1
-    elif event.y <= 100:
-        row = 2
-    elif event.y <= 150:
-        row = 3
-    elif event.y <= 200:
-        row = 4
-    elif event.y <= 250:
-        row = 5
-    else:
-        print('Invalid Space')
-        
-    Sprite(ships,((col-1)*50, (row-1)*50)
+    Sprite(ships,((col-1)*50, (row-1)*50))
     
 if __name__ == '__main__': 
     
