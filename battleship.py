@@ -51,6 +51,7 @@ if __name__ == '__main__':
     
     data = {}
     data['matrix'] = buildBoard()
+
     
     boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
     ships = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),blue)
