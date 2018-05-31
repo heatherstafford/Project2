@@ -12,7 +12,7 @@ black = Color(0x000000,1)
 blue = Color(0xFF0000,1)
 
 def buildBoard():
-    board = [['','','','',''],['','','','',''],['','','','',''],['','','','',''],['','','','','']]
+    return[['','','','',''],['','','','',''],['','','','',''],['','','','',''],['','','','','']]
 
 def redrawAll():
     for item in App().spritelist[:]:
@@ -21,6 +21,7 @@ def redrawAll():
         for c in range(5):
             Sprite(boardgraphics,((RADIUS)*r,(RADIUS)*c))
             Sprite(boardgraphics,(((RADIUS)*r) + 400,(RADIUS)*c))
+            if 
 
 def pickComputerShips():
     ship1row = randint(0,5)
@@ -43,11 +44,13 @@ def mouseClick(event):
     row = event.y // 50
     col = event.x // 50
         
-    Sprite(ships,((col-1)*50, (row-1)*50))
+    data['matrix'][row][col] = 'ship'
+    redrawAll()
     
 if __name__ == '__main__': 
     
     data = {}
+    data['matrix'] = buildBoard()
     
     boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
     ships = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),blue)
