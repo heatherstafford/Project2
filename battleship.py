@@ -66,7 +66,7 @@ def mouseClick(event):
     else:
         print('Invalid Space')
         
-    Sprite(ships,((row-1)*50, (col -1)*50))
+    Sprite(ships,((col-1)*50, (row-1)*50)
     
 if __name__ == '__main__': 
     
