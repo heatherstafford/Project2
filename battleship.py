@@ -57,7 +57,9 @@ def mouseClick(event):
     row = event.y // 50
     col = event.x // 50
     
-    data['matrix'][row][col] = 'ship'
+    if data['shipnumber'] <= 3:
+        data['matrix'][row][col] = 'ship'
+        data['shipnumber'] += 1
     redrawAll()
 
     
@@ -67,6 +69,7 @@ if __name__ == '__main__':
     data['matrix'] = buildBoard()
     data['boatmatrix'] = buildBoard()
     data['guessmatrix'] = buildBoard()
+    data['shipnumber'] = 0
 
     
     boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
