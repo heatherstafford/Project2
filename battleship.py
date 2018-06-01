@@ -21,7 +21,7 @@ def redrawAll():
         for c in range(5):
             Sprite(boardgraphics,((RADIUS)*r,(RADIUS)*c))
             Sprite(boardgraphics,(((RADIUS)*r) + 400,(RADIUS)*c))
-            if 
+            
 
 def pickComputerShips():
     ship1row = randint(0,5)
@@ -36,7 +36,10 @@ def pickComputerShips():
     ship1col = randint(0,5)
     ship2col = randint(0,5)
     ship3col = randint(0,5)
-    print(ship1col, ship2col, ship3col)
+    
+    data['boatmatric'][ship1row][ship1col] = 'ship'
+    data['boatmatrix'][ship2row][ship3col] = 'ship'
+    data['boatmatrix'][ship3row][ship4col] = 'ship'
     
 def computerTurn(): 
     return
@@ -51,6 +54,7 @@ if __name__ == '__main__':
     
     data = {}
     data['matrix'] = buildBoard()
+    data['boatmatrix'] = buildBoard()
 
     
     boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
