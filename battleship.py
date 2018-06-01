@@ -9,7 +9,7 @@ RADIUS = 50
 
 white = Color(0xFFFFFF,1)
 black = Color(0x000000,1)
-blue = Color(0xFF0000,1)
+blue = Color(0x00FF00,1)
 
 def buildBoard():
     return[['','','','',''],['','','','',''],['','','','',''],['','','','',''],['','','','','']]
@@ -24,7 +24,7 @@ def redrawAll():
                 Sprite(ships,((RADIUS)*c,(RADIUS)*r))
             Sprite(boardgraphics,(((RADIUS)*c) + 400,(RADIUS)*r))
             if data['boatmatrix'][r][c] == 'ship':
-                Sprite(ships,((RADIUS)*c) + 400,(RADIUS)*r))
+                Sprite(ships,(((RADIUS)*c) + 400,(RADIUS)*r))
             
     print(data['matrix'])
             
