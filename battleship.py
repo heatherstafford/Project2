@@ -44,12 +44,15 @@ def pickComputerShips():
     
 def computerTurn(): 
     return
+
 def mouseClick(event):
     row = event.y // 50
     col = event.x // 50
         
     data['matrix'][row][col] = 'ship'
     redrawAll()
+    
+    print(data['matrix'])
     
 if __name__ == '__main__': 
     
