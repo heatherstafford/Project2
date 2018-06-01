@@ -21,6 +21,7 @@ def redrawAll():
         for c in range(5):
             Sprite(boardgraphics,((RADIUS)*r,(RADIUS)*c))
             Sprite(boardgraphics,(((RADIUS)*r) + 400,(RADIUS)*c))
+    print(data['matrix'])
             
 
 def pickComputerShips():
@@ -43,7 +44,11 @@ def pickComputerShips():
     print(data['boatmatrix'])
     
 def computerTurn(): 
-    return
+    guessrow = randint(-1,4)
+    guesscol = randint(-1,4)
+    data['guessmatrix'][guessrow][guesscol] = 'ship'
+    if data['guessmatrix'] == data['matrix']:
+        print(good)
 
 def mouseClick(event):
     row = event.y // 50
@@ -51,14 +56,14 @@ def mouseClick(event):
         
     data['matrix'][row][col] = 'ship'
     redrawAll()
-    
-    print(data['matrix'])
+
     
 if __name__ == '__main__': 
     
     data = {}
     data['matrix'] = buildBoard()
     data['boatmatrix'] = buildBoard()
+    data['guessmatrix'] = buildBoard()
 
     
     boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
