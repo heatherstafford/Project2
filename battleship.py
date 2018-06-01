@@ -54,7 +54,7 @@ def computerTurn():
     guesscol = randint(0,4)
     data['guessmatrix'][guessrow][guesscol] = 'ship'
     if data['guessmatrix'] == data['matrix']:
-        Sprite(hit((RADIUS)*c,(RADIUS)*r))
+        Sprite(hit((RADIUS)*guesscol,(RADIUS)*guessrow))
 
 def mouseClick(event):
     row = event.y // 50
