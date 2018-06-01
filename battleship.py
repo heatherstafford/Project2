@@ -37,9 +37,11 @@ def pickComputerShips():
     ship2col = randint(0,5)
     ship3col = randint(0,5)
     
-    data['boatmatric'][ship1row][ship1col] = 'ship'
-    data['boatmatrix'][ship2row][ship3col] = 'ship'
-    data['boatmatrix'][ship3row][ship4col] = 'ship'
+    data['boatmatrix'][ship1row][ship1col] = 'ship'
+    data['boatmatrix'][ship2row][ship2col] = 'ship'
+    data['boatmatrix'][ship3row][ship3col] = 'ship'
+    
+    print(data['boatmatrix'])
     
 def computerTurn(): 
     return
