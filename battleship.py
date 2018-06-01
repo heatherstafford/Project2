@@ -57,7 +57,7 @@ def mouseClick(event):
     row = event.y // 50
     col = event.x // 50
     
-    if data['shipnumber'] <= 3:
+    if data['shipnumber'] < 3:
         data['matrix'][row][col] = 'ship'
         data['shipnumber'] += 1
     redrawAll()
