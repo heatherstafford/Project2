@@ -26,8 +26,7 @@ def redrawAll():
             Sprite(boardgraphics,(((RADIUS)*c) + 400,(RADIUS)*r))
             if data['boatmatrix'][r][c] == 'ship':
                 Sprite(ships,(((RADIUS)*c) + 400,(RADIUS)*r))
-            if data['guessmatrix'] == data['matrix']:
-                Sprite(hit(((RADIUS)*c,(RADIUS)*r))
+           
     print(data['matrix'])
 
 def pickComputerShips():
@@ -54,6 +53,8 @@ def computerTurn():
     guessrow = randint(0,4)
     guesscol = randint(0,4)
     data['guessmatrix'][guessrow][guesscol] = 'ship'
+    if data['guessmatrix'] == data['matrix']:
+        Sprite(hit((RADIUS)*c,(RADIUS)*r))
 
 def mouseClick(event):
     row = event.y // 50
