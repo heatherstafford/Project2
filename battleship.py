@@ -24,17 +24,17 @@ def redrawAll():
             
 
 def pickComputerShips():
-    ship1row = randint(0,5)
-    ship2row = randint(0,5)
+    ship1row = randint(-1,4)
+    ship2row = randint(-1,4)
     while ship2row == ship1row:
-        ship2row = randint(0,5)
-    ship3row = randint(0,5)
+        ship2row = randint(-1,4)
+    ship3row = randint(-1,4)
     while ship3row == ship1row or ship3row == ship2row:
-        ship3row = randint(0,5)
+        ship3row = randint(-1,4)
     
-    ship1col = randint(0,5)
-    ship2col = randint(0,5)
-    ship3col = randint(0,5)
+    ship1col = randint(-1,4)
+    ship2col = randint(-1,4)
+    ship3col = randint(-1,4)
     
     data['boatmatrix'][ship1row][ship1col] = 'ship'
     data['boatmatrix'][ship2row][ship2col] = 'ship'
