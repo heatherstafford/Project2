@@ -31,7 +31,6 @@ def pickComputerShips():
     ship3row = randint(0,5)
     while ship3row == ship1row or ship3row == ship2row:
         ship3row = randint(0,5)
-    print(ship1row, ship2row, ship3row)
     
     ship1col = randint(0,5)
     ship2col = randint(0,5)
