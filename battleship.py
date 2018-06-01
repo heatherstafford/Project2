@@ -23,26 +23,29 @@ def redrawAll():
             if data['matrix'][r][c] == 'ship':
                 Sprite(ships,((RADIUS)*c,(RADIUS)*r))
             Sprite(boardgraphics,(((RADIUS)*c) + 400,(RADIUS)*r))
+            if data['boatmatrix'][r][c] == 'ship':
+                Sprite(ships,((RADIUS)*c) + 400,(RADIUS)*r))
             
     print(data['matrix'])
             
 
 def pickComputerShips():
-    ship1row = randint(-1,4)
-    ship2row = randint(-1,4)
+    ship1row = randint(0,4)
+    ship2row = randint(0,4)
     while ship2row == ship1row:
-        ship2row = randint(-1,4)
-    ship3row = randint(-1,4)
+        ship2row = randint(0,4)
+    ship3row = randint(0,4)
     while ship3row == ship1row or ship3row == ship2row:
-        ship3row = randint(-1,4)
+        ship3row = randint(0,4)
     
-    ship1col = randint(-1,4)
-    ship2col = randint(-1,4)
-    ship3col = randint(-1,4)
+    ship1col = randint(0,4)
+    ship2col = randint(0,4)
+    ship3col = randint(0,4)
     
     data['boatmatrix'][ship1row][ship1col] = 'ship'
     data['boatmatrix'][ship2row][ship2col] = 'ship'
     data['boatmatrix'][ship3row][ship3col] = 'ship'
+    redrawAll()
     
     print(data['boatmatrix'])
 """
@@ -61,7 +64,6 @@ def mouseClick(event):
         data['matrix'][row][col] = 'ship'
         data['shipnumber'] += 1
     redrawAll()
-
     
 if __name__ == '__main__': 
     
