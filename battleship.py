@@ -10,6 +10,7 @@ RADIUS = 50
 white = Color(0xFFFFFF,1)
 black = Color(0x000000,1)
 blue = Color(0x0000FF,1)
+red = Color(0xFF0000,1)
 
 def buildBoard():
     return[['','','','',''],['','','','',''],['','','','',''],['','','','',''],['','','','','']]
@@ -25,9 +26,9 @@ def redrawAll():
             Sprite(boardgraphics,(((RADIUS)*c) + 400,(RADIUS)*r))
             if data['boatmatrix'][r][c] == 'ship':
                 Sprite(ships,(((RADIUS)*c) + 400,(RADIUS)*r))
-            
+            if data['guessmatrix'] == data['matrix']:
+                Sprite(hit(((RADIUS)*c,(RADIUS)*r))
     print(data['matrix'])
-            
 
 def pickComputerShips():
     ship1row = randint(0,4)
@@ -48,14 +49,12 @@ def pickComputerShips():
     redrawAll()
     
     print(data['boatmatrix'])
-"""
+
 def computerTurn(): 
-    guessrow = randint(-1,4)
-    guesscol = randint(-1,4)
+    guessrow = randint(0,4)
+    guesscol = randint(0,4)
     data['guessmatrix'][guessrow][guesscol] = 'ship'
-    if data['guessmatrix'] == data['matrix']:
-        print(good)
-"""
+
 def mouseClick(event):
     row = event.y // 50
     col = event.x // 50
@@ -76,6 +75,7 @@ if __name__ == '__main__':
     
     boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
     ships = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),blue)
+    hit = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),red)
 
     redrawAll()
     pickComputerShips()
