@@ -19,10 +19,10 @@ def redrawAll():
         item.destroy()
     for r in range(5):
         for c in range(5):
-            Sprite(boardgraphics,((RADIUS)*r,(RADIUS)*c))
+            Sprite(boardgraphics,((RADIUS)*c,(RADIUS)*r))
             if data['matrix'][r][c] == 'ship':
                 Sprite(ships,((RADIUS)*c,(RADIUS)*r))
-            Sprite(boardgraphics,(((RADIUS)*r) + 400,(RADIUS)*c))
+            Sprite(boardgraphics,(((RADIUS)*c) + 400,(RADIUS)*r))
             
     print(data['matrix'])
             
