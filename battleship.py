@@ -42,14 +42,14 @@ def pickComputerShips():
     data['boatmatrix'][ship3row][ship3col] = 'ship'
     
     print(data['boatmatrix'])
-    
+"""
 def computerTurn(): 
     guessrow = randint(-1,4)
     guesscol = randint(-1,4)
     data['guessmatrix'][guessrow][guesscol] = 'ship'
     if data['guessmatrix'] == data['matrix']:
         print(good)
-
+"""
 def mouseClick(event):
     row = event.y // 50
     col = event.x // 50
