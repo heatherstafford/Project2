@@ -53,8 +53,9 @@ def computerTurn():
 def mouseClick(event):
     row = event.y // 50
     col = event.x // 50
-        
-    data['matrix'][row][col] = 'ship'
+    
+    for i in range(0,3):
+        data['matrix'][row][col] = 'ship'
     redrawAll()
 
     
