@@ -54,8 +54,7 @@ def mouseClick(event):
     row = event.y // 50
     col = event.x // 50
     
-    for i in range(0,3):
-        data['matrix'][row][col] = 'ship'
+    data['matrix'][row][col] = 'ship'
     redrawAll()
 
     
