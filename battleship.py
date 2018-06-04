@@ -79,11 +79,8 @@ if __name__ == '__main__':
     data = {}
     data['matrix'] = buildBoard()
     data['boatmatrix'] = buildBoard()
-    data['guessmatrix'] = buildBoard()
     data['shipnumber'] = 0
-    data['sunk'] = 0
-    data['boatsunk'] = 0
-    data['humanguess'] = buildBoard()
+    data['boatnumber'] = 0
     
     boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
     ships = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),blue)
@@ -93,6 +90,6 @@ if __name__ == '__main__':
     pickComputerShips()
     
     App().listenMouseEvent('click', mouseClick)
-    App().listenHumanGuessEvent('click', mouseClick)
+  
     App().run()
     
