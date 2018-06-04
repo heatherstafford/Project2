@@ -83,7 +83,7 @@ if __name__ == '__main__':
     data['shipnumber'] = 0
     data['sunk'] = 0
     data['boatsunk'] = 0
-    data['humanguess'] = buildboard()
+    data['humanguess'] = buildBoard()
     
     boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
     ships = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),blue)
