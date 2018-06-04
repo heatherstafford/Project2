@@ -54,7 +54,7 @@ def computerTurn():
     guesscol = randint(0,4)
     data['guessmatrix'][guessrow][guesscol] = 'ship'
     if data['guessmatrix'][guessrow][guesscol] == data['matrix'][guessrow][guesscol]:
-        Sprite(hit((RADIUS)*guesscol,(RADIUS)*guessrow))
+        Sprite(hit,((RADIUS)*guesscol,(RADIUS)*guessrow))
 
 def mouseClick(event):
     row = event.y // 50
@@ -64,6 +64,15 @@ def mouseClick(event):
         data['matrix'][row][col] = 'ship'
         data['shipnumber'] += 1
     redrawAll()
+
+def humanGuess(event):
+    row = event.y //50
+    col = event.x //50
+    data['humanguess'][row][col] = 'ship'
+    if data['boatmatrix'][row][col] == data['humanguess'][row][col]:
+        Sprite(hit,((RADIUS)*col,(RADIUS)*row))
+        
+    computerTurn()
     
 if __name__ == '__main__': 
     
@@ -74,6 +83,7 @@ if __name__ == '__main__':
     data['shipnumber'] = 0
     data['sunk'] = 0
     data['boatsunk'] = 0
+    data['humanguess'] = buildboard()
     
     boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
     ships = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),blue)
@@ -83,5 +93,6 @@ if __name__ == '__main__':
     pickComputerShips()
     
     App().listenMouseEvent('click', mouseClick)
+    App().listenHumanGuessEvent('click', mouseClick)
     App().run()
     
