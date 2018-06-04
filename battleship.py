@@ -26,6 +26,10 @@ def redrawAll():
             Sprite(boardgraphics,(((RADIUS)*c) + 400,(RADIUS)*r))
             if data['boatmatrix'][r][c] == 'ship':
                 Sprite(ships,(((RADIUS)*c) + 400,(RADIUS)*r))
+            elif data['boatmatrix'][r][c] == 'hit':
+                Sprite(hit,(((RADIUS)*c) + 400,(RADIUS)*r))
+            elif data['boatmatrix'][r][c] == 'miss':
+                Sprite(miss,(((RADIUS)*c) + 400,(RADIUS)*r))
            
     print(data['matrix'])
 
@@ -63,7 +67,14 @@ def mouseClick(event):
     if data['shipnumber'] < 3:
         data['matrix'][row][col] = 'ship'
         data['shipnumber'] += 1
+    else:
+        col = (event.x - 400) // 50
+        if data['boatmatrix'][row][col] == 'ship':
+            data['boatmatrix'][row][col] = 'hit'
+        else:
+            data['boatmatrix'][row][col] = 'miss'
     redrawAll()
+    
 
 def humanGuess(event):
     row = event.y //50
