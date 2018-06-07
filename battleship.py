@@ -34,8 +34,6 @@ def redrawAll():
                 Sprite(hit,(((RADIUS)*c) + 400,(RADIUS)*r))
             elif data['boatmatrix'][r][c] == 'miss':
                 Sprite(miss,(((RADIUS)*c) + 400,(RADIUS)*r))
-           
-    print(data['matrix'])
 
 def pickComputerShips():
     ship1row = randint(0,4)
@@ -54,8 +52,6 @@ def pickComputerShips():
     data['boatmatrix'][ship2row][ship2col] = 'ship'
     data['boatmatrix'][ship3row][ship3col] = 'ship'
     redrawAll()
-    
-    print(data['boatmatrix'])
 
 def computerTurn(): 
     guessrow = randint(0,4)
