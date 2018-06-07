@@ -74,6 +74,7 @@ def mouseClick(event):
         else:
             data['boatmatrix'][row][col] = 'miss'
     redrawAll()
+    computerTurn()
     
 
 def humanGuess(event):
