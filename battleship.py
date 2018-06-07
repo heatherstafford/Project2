@@ -96,6 +96,7 @@ if __name__ == '__main__':
     boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
     ships = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),blue)
     hit = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),red)
+    miss = CircleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
 
     redrawAll()
     pickComputerShips()
