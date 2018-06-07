@@ -23,7 +23,7 @@ def redrawAll():
             Sprite(boardgraphics,((RADIUS)*c,(RADIUS)*r))
             if data['matrix'][r][c] == 'ship':
                 Sprite(ships,((RADIUS)*c,(RADIUS)*r))
-            elif if data['matrix'][r][c] == 'hit':
+            elif data['matrix'][r][c] == 'hit':
                 Sprite(hit,(((RADIUS)*c),(RADIUS)*r))
             elif data['matrix'][r][c] == 'miss':
                 Sprite(miss,(((RADIUS)*c),(RADIUS)*r))
