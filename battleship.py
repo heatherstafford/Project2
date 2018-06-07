@@ -64,6 +64,7 @@ def computerTurn():
         data['matrix'][guessrow][guesscol] == 'hit'
     else:
         data['matrix'][guessrow][guesscol] == 'miss'
+    redrawAll()
 
 def mouseClick(event):
     row = event.y // 50
