@@ -56,9 +56,9 @@ def computerTurn():
     guessrow = randint(0,4)
     guesscol = randint(0,4)
     if data['matrix'][guessrow][guesscol] == 'ship':
-        data['matrix'][guessrow][guesscol] == 'hit'
+        data['matrix'][guessrow][guesscol] = 'hit'
     else:
-        data['matrix'][guessrow][guesscol] == 'miss'
+        data['matrix'][guessrow][guesscol] = 'miss'
     redrawAll()
 
 def mouseClick(event):
