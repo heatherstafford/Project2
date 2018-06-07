@@ -56,7 +56,7 @@ def pickComputerShips():
 def computerTurn(): 
     guessrow = randint(0,4)
     guesscol = randint(0,4)
-    data['guessmatrix'][guessrow][guesscol] == 'ship'
+    data['guessmatrix'][guessrow][guesscol] = 'ship'
     if data['humanmatrix'][guessrow][guesscol] == 'ship':
         data['guessmatrix'][guessrow][guesscol] == 'hit'
     else:
