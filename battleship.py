@@ -56,9 +56,11 @@ def pickComputerShips():
 def computerTurn(): 
     guessrow = randint(0,4)
     guesscol = randint(0,4)
-    data['guessmatrix'][guessrow][guesscol] = 'ship'
-    if data['guessmatrix'][guessrow][guesscol] == data['matrix'][guessrow][guesscol]:
-        Sprite(hit,((RADIUS)*guesscol,(RADIUS)*guessrow))
+    data['guessmatrix'][guessrow][guesscol] == 'ship'
+    if data['humanmatrix'][guessrow][guesscol] == 'ship':
+        data['guessmatrix'][guessrow][guesscol] == 'hit'
+    else:
+        data['guessmatrix'][guessrow][guesscol] == 'miss'
 
 def mouseClick(event):
     row = event.y // 50
@@ -74,7 +76,6 @@ def mouseClick(event):
         else:
             data['boatmatrix'][row][col] = 'miss'
     redrawAll()
-    computerTurn()
     
 
 def humanGuess(event):
