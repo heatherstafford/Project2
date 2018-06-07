@@ -64,7 +64,6 @@ def computerTurn():
         data['matrix'][guessrow][guesscol] == 'hit'
     else:
         data['matrix'][guessrow][guesscol] == 'miss'
-    
 
 def mouseClick(event):
     row = event.y // 50
@@ -80,6 +79,7 @@ def mouseClick(event):
         else:
             data['boatmatrix'][row][col] = 'miss'
     redrawAll()
+    computerTurn()
 
 def humanGuess(event):
     row = event.y //50
@@ -87,8 +87,6 @@ def humanGuess(event):
     data['humanguess'][row][col] = 'ship'
     if data['boatmatrix'][row][col] == data['humanguess'][row][col]:
         Sprite(hit,((RADIUS)*col,(RADIUS)*row))
-        
-    computerTurn()
     
 if __name__ == '__main__': 
     
