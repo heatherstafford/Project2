@@ -53,12 +53,15 @@ def pickComputerShips():
     data['boatmatrix'][ship3row][ship3col] = 'ship'
 
 def computerTurn(): 
-    row = randint(0,4)
-    
-    if data['matrix'][guessrow][guesscol] == 'ship':
-        data['matrix'][guessrow][guesscol] = 'hit'
-    else:
-        data['matrix'][guessrow][guesscol] = 'miss'
+    guessrow = randint(0,4)
+    guesscol = randint(0,4)
+    if data['matrix'][guessrow][guesscol] != 'hit' and data['matrix'][guessrow][guesscol] != 'miss':
+        if data['matrix'][guessrow][guesscol] == 'ship':
+            data['matrix'][guessrow][guesscol] = 'hit'
+        else:
+            data['matrix'][guessrow][guesscol] = 'miss'
+    else: 
+        computerTurn()
     redrawAll()
 
 def mouseClick(event):
