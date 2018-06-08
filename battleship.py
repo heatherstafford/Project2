@@ -58,7 +58,7 @@ def computerTurn():
     if data['matrix'][guessrow][guesscol] != 'hit' and data['matrix'][guessrow][guesscol] != 'miss':
         if data['matrix'][guessrow][guesscol] == 'ship':
             data['matrix'][guessrow][guesscol] = 'hit'
-            data['shipsSunk'] += 1
+            data['boatshipsSunk'] += 1
         else:
             data['matrix'][guessrow][guesscol] = 'miss'
     else: 
@@ -80,6 +80,7 @@ def mouseClick(event):
         col = (event.x - 400) // 50
         if data['boatmatrix'][row][col] == 'ship':
             data['boatmatrix'][row][col] = 'hit'
+            data['playershipsSunk'] += 1
         else:
             data['boatmatrix'][row][col] = 'miss'
         computerTurn()
@@ -92,7 +93,8 @@ if __name__ == '__main__':
     data['boatmatrix'] = buildBoard()
     data['shipnumber'] = 0
     data['boatnumber'] = 0
-    data['shipsSunk'] = 0
+    data['boatshipsSunk'] = 0
+    data['playershipsSunk'] = 0
     
     boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
     ships = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),blue)
