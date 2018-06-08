@@ -58,10 +58,15 @@ def computerTurn():
     if data['matrix'][guessrow][guesscol] != 'hit' and data['matrix'][guessrow][guesscol] != 'miss':
         if data['matrix'][guessrow][guesscol] == 'ship':
             data['matrix'][guessrow][guesscol] = 'hit'
+            data['shipsSunk'] += 1
         else:
             data['matrix'][guessrow][guesscol] = 'miss'
     else: 
         computerTurn()
+        
+    if data['shipsSunk'] == 3:
+        Sprite(computerwinner, (200, 200))
+    
     redrawAll()
 
 def mouseClick(event):
@@ -87,11 +92,14 @@ if __name__ == '__main__':
     data['boatmatrix'] = buildBoard()
     data['shipnumber'] = 0
     data['boatnumber'] = 0
+    data['shipsSunk'] = 0
     
     boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
     ships = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),blue)
     hit = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),red)
     miss = CircleAsset(RADIUS/2,LineStyle(1,black),white)
+    computerwinner = TextAsset('The Computer Wins!', fill = black, style = 'italic 35pt times')
+    playerwinner = TextAsset('The Player Wins!', fill = black, style = 'italic 35pt times')
 
     redrawAll()
     pickComputerShips()
