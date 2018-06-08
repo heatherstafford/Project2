@@ -56,9 +56,10 @@ def computerTurn():
     guessrow = randint(0,4)
     guesscol = randint(0,4)
     if data['matrix'][guessrow][guesscol] != 'hit' and data['matrix'][guessrow][guesscol] != 'miss':
-        if data['matrix'][guessrow][guesscol] == 'ship':
-            data['matrix'][guessrow][guesscol] = 'hit'
-            data['boatshipsSunk'] += 1
+        if data['boatshipsSunk'] < 4:
+            if data['matrix'][guessrow][guesscol] == 'ship':
+                data['matrix'][guessrow][guesscol] = 'hit'
+                data['boatshipsSunk'] += 1
             if data['boatshipsSunk'] == 3:
                 Sprite(computerwinner, (200, 200))
         else:
@@ -79,7 +80,7 @@ def mouseClick(event):
         if data['boatmatrix'][row][col] == 'ship':
             data['boatmatrix'][row][col] = 'hit'
             data['playershipsSunk'] += 1
-            if data['playershipsSunk'] == 3:
+            if data['playershipsSunk'] < 3:
                 Sprite(playerwinner, (200,200))
         else:
             data['boatmatrix'][row][col] = 'miss'
