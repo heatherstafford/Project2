@@ -64,7 +64,7 @@ def computerTurn():
     else: 
         computerTurn()
         
-    if data['shipsSunk'] == 3:
+    if data['boatshipsSunk'] == 3:
         Sprite(computerwinner, (200, 200))
     
     redrawAll()
@@ -84,6 +84,9 @@ def mouseClick(event):
         else:
             data['boatmatrix'][row][col] = 'miss'
         computerTurn()
+        
+    if data['playershipsSunk'] == 3:
+        Sprite(playerwinner, (200,200))
     redrawAll()
     
 if __name__ == '__main__': 
