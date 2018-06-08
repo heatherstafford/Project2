@@ -77,10 +77,11 @@ def mouseClick(event):
         data['shipnumber'] += 1
     else:
         col = (event.x - 400) // 50
-        if data['boatmatrix'][row][col] == 'ship':
-            data['boatmatrix'][row][col] = 'hit'
-            data['playershipsSunk'] += 1
-            if data['playershipsSunk'] < 3:
+        if data['playershipsSunk'] < 4:
+            if data['boatmatrix'][row][col] == 'ship':
+                data['boatmatrix'][row][col] = 'hit'
+                data['playershipsSunk'] += 1
+            if data['playershipsSunk'] == 3:
                 Sprite(playerwinner, (200,200))
         else:
             data['boatmatrix'][row][col] = 'miss'
