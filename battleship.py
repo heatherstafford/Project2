@@ -5,16 +5,20 @@
 from ggame import *
 from random import randint
 
+#size of the boxes
 RADIUS = 50
 
+#colors
 white = Color(0xFFFFFF,1)
 black = Color(0x000000,1)
 blue = Color(0x0000FF,1)
 red = Color(0xFF0000,1)
 
+#creates and returns a 5x5 empty matrix
 def buildBoard():
     return[['','','','',''],['','','','',''],['','','','',''],['','','','',''],['','','','','']]
 
+#deletes all the graphics on the board and redraws the player board and cmputer board in their current state
 def redrawAll():
     for item in App().spritelist[:]:
         item.destroy()
@@ -39,6 +43,7 @@ def redrawAll():
             if data['boatshipsSunk'] == 3:
                 Sprite(computerwinner, (270, 200))
             
+#the computer chooses three random places to put ships, and not on top of each other
 def pickComputerShips():
     ship1row = randint(0,4)
     ship2row = randint(0,4)
@@ -56,6 +61,8 @@ def pickComputerShips():
     data['boatmatrix'][ship2row][ship2col] = 'ship'
     data['boatmatrix'][ship3row][ship3col] = 'ship'
 
+#The computer chooses a random row and column to guess for a ship on the players board
+#updates the matrix that holds information about hit, miss, or ship
 def computerTurn(): 
     guessrow = randint(0,4)
     guesscol = randint(0,4)
@@ -69,6 +76,9 @@ def computerTurn():
         computerTurn()
     redrawAll()
 
+#figures out what column and row the player clicked for a ship
+#once the player places three ships the player guesses for computer ships
+#it updates the matrix that holds information about hit, miss, or ship
 def mouseClick(event):
     row = event.y // 50
     col = event.x // 50
@@ -86,8 +96,10 @@ def mouseClick(event):
         computerTurn()
     redrawAll()
     
+#sets up the game
 if __name__ == '__main__': 
     
+    #dictionary
     data = {}
     data['matrix'] = buildBoard()
     data['boatmatrix'] = buildBoard()
@@ -96,6 +108,7 @@ if __name__ == '__main__':
     data['boatshipsSunk'] = 0
     data['playershipsSunk'] = 0
     
+    #all the graphics used
     boardgraphics = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),white)
     ships = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),blue)
     hit = RectangleAsset(RADIUS,RADIUS,LineStyle(1,black),red)
