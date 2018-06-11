@@ -18,7 +18,7 @@ red = Color(0xFF0000,1)
 def buildBoard():
     return[['','','','',''],['','','','',''],['','','','',''],['','','','',''],['','','','','']]
 
-#deletes all the graphics on the board and redraws the player board and cmputer board in their current state
+#deletes all the graphics on the board and redraws the player board and computer board in their current state
 def redrawAll():
     for item in App().spritelist[:]:
         item.destroy()
@@ -120,8 +120,6 @@ if __name__ == '__main__':
 
     redrawAll()
     pickComputerShips()
-    
     App().listenMouseEvent('click', mouseClick)
-  
     App().run()
     
