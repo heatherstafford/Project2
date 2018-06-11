@@ -35,9 +35,9 @@ def redrawAll():
             elif data['boatmatrix'][r][c] == 'miss':
                 Sprite(miss,(((RADIUS)*c) + 400,(RADIUS)*r))
             if data['playershipsSunk'] == 3:
-                Sprite(playerwinner, (200,200))
+                Sprite(playerwinner, (280,200))
             if data['boatshipsSunk'] == 3:
-                Sprite(computerwinner, (200, 200))
+                Sprite(computerwinner, (280, 200))
             
 
 def pickComputerShips():
