@@ -109,8 +109,8 @@ if __name__ == '__main__':
     redrawAll()
     pickComputerShips()
     
-    Sprite(computerboard, (300, 300))
-    Sprite(playerboard, (50, 300))
+    Sprite(computerboard, (500, 250))
+    Sprite(playerboard, (50,250))
     
     App().listenMouseEvent('click', mouseClick)
   
