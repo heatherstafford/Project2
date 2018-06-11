@@ -14,8 +14,8 @@ red = Color(0xFF0000,1)
 
 def buildBoard():
     return[['','','','',''],['','','','',''],['','','','',''],['','','','',''],['','','','','']]
-    Sprite(computerboard, (280, 500)
-    Sprite(playerboard, (50, 500)
+    Sprite(computerboard, (280, 500))
+    Sprite(playerboard, (50, 500))
 
 def redrawAll():
     for item in App().spritelist[:]:
