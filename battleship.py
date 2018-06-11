@@ -28,18 +28,17 @@ def redrawAll():
             elif data['matrix'][r][c] == 'miss':
                 Sprite(miss,(((RADIUS)*c),(RADIUS)*r))
             Sprite(boardgraphics,(((RADIUS)*c) + 400,(RADIUS)*r))
-            if data['boatmatrix'][r][c] == 'ship':
-                Sprite(ships,(((RADIUS)*c) + 400,(RADIUS)*r))
-            elif data['boatmatrix'][r][c] == 'hit':
+            Sprite(computerboard, (430, 250))
+            Sprite(playerboard, (70,250))
+            if data['boatmatrix'][r][c] == 'hit':
                 Sprite(hit,(((RADIUS)*c) + 400,(RADIUS)*r))
             elif data['boatmatrix'][r][c] == 'miss':
                 Sprite(miss,(((RADIUS)*c) + 400,(RADIUS)*r))
             if data['playershipsSunk'] == 3:
                 Sprite(playerwinner, (280,200))
             if data['boatshipsSunk'] == 3:
-                Sprite(computerwinner, (280, 200))
+                Sprite(computerwinner, (270, 200))
             
-
 def pickComputerShips():
     ship1row = randint(0,4)
     ship2row = randint(0,4)
@@ -108,9 +107,6 @@ if __name__ == '__main__':
 
     redrawAll()
     pickComputerShips()
-    
-    Sprite(computerboard, (430, 250))
-    Sprite(playerboard, (70,250))
     
     App().listenMouseEvent('click', mouseClick)
   
