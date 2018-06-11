@@ -14,6 +14,8 @@ red = Color(0xFF0000,1)
 
 def buildBoard():
     return[['','','','',''],['','','','',''],['','','','',''],['','','','',''],['','','','','']]
+    Sprite(computerboard, (280, 500)
+    Sprite(playerboard, (50, 500)
 
 def redrawAll():
     for item in App().spritelist[:]:
@@ -103,6 +105,8 @@ if __name__ == '__main__':
     miss = CircleAsset(RADIUS/2,LineStyle(1,black),white)
     computerwinner = TextAsset('The Computer Wins!', fill = black, style = 'italic 35pt times')
     playerwinner = TextAsset('The Player Wins!', fill = black, style = 'italic 35pt times')
+    playerboard = TextAsset('Player Board', fill = black, style = 'italic 35pt times')
+    computerboard = TextAsset('Computer Board', fill = black, style = 'italic 35pt times')
 
     redrawAll()
     pickComputerShips()
